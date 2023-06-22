@@ -1,0 +1,77 @@
+// base color
+$paddingMain: 1%;
+$bigTitle: 2rem;
+$fontweight: 700;
+$subTitleColor: #06d5e1;
+$linePx: 2px;
+
+// $roomListMainBg: #101629;
+$roomListMainBg: rgba(5, 6, 51, 0.7);
+$roomListItemBg: #1d253b;
+$roomListItemBgBorder: #4f5b77;
+
+:export {
+  paddingMain: $paddingMain; // 主页左右下内边距
+  bigTitle: $bigTitle; // 大标题
+  fontweight: $fontweight; // 字体加重
+  subTitleColor: $subTitleColor; // 副标题颜色
+  roomListMainBg: $roomListMainBg; // 考场列表外边框背景
+  roomListItemBg: $roomListItemBg; // 考场列表卡片项背景
+  roomListItemBgBorder: $roomListItemBgBorder; // 考场列表卡片项背景描边
+  linePx: $linePx; // 边线宽度
+}
+
+// div边线
+.boderLine {
+  border-bottom: $linePx solid;
+  border-top: $linePx solid;
+  border-image: -webkit-linear-gradient(-270deg, rgba(255, 255, 255, 0.00) 0%, #00BBF2 45%, rgba(255, 255, 255, 0.00) 99%) 2 2 2 2;
+  border-image: -moz-linear-gradient(-270deg, rgba(255, 255, 255, 0.00) 0%, #00BBF2 45%, rgba(255, 255, 255, 0.00) 99%) 2 2 2 2;
+  border-image: linear-gradient(-270deg, rgba(255, 255, 255, 0.00) 0%, #00BBF2 45%, rgba(255, 255, 255, 0.00) 99%) 2 2 2 2;
+}
+
+.boderLine::before {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: 5;
+
+  border-left: $linePx solid;
+  border-right: $linePx solid;
+  border-image: -webkit-linear-gradient(-180deg,
+      rgba(255, 255, 255, 0) 0%,
+      #00bbf2 40%,
+      rgba(255, 255, 255, 0) 99%) 2 2 2 2;
+  border-image: -moz-linear-gradient(-180deg,
+      rgba(255, 255, 255, 0) 0%,
+      #00bbf2 40%,
+      rgba(255, 255, 255, 0) 99%) 2 2 2 2;
+  border-image: linear-gradient(-180deg,
+      rgba(255, 255, 255, 0) 0%,
+      #00bbf2 40%,
+      rgba(255, 255, 255, 0) 99%) 2 2 2 2;
+}
+
+/*定义滚动条高宽及背景 高宽分别对应横竖滚动条的尺寸*/
+::-webkit-scrollbar {
+  width: 9px;
+  height: 9px
+}
+
+/*定义滚动条轨道*/
+::-webkit-scrollbar-track {
+  background-color: transparent;
+  -webkit-border-radius: 2em;
+  -moz-border-radius: 2em;
+  border-radius: 2em
+}
+
+/*定义滑块 内阴影+圆角*/
+::-webkit-scrollbar-thumb {
+  background-color: rgba(25, 103, 168, .3);
+  /* background-image: -webkit-linear-gradient(45deg,rgba(255,255,255,.4) 25%,transparent 25%,transparent 50%,rgba(255,255,255,.4) 50%,rgba(255,255,255,.4) 75%,transparent 75%,transparent); */
+  -webkit-border-radius: 2em;
+  -moz-border-radius: 2em;
+  border-radius: 2em
+}
